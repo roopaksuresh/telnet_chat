@@ -54,7 +54,7 @@ if __name__ == "__main__":
                     # a "Connection reset by peer" exception will be thrown
                     data = sock.recv(RECV_BUFFER)
                     if data:
-                        broadcast_data(sock, "\r" + '<' + str(sock.getpeername()) + '> ' + data)                
+                        broadcast_data(sock, "\r" + data)                # message is broadcated to all the peers(the message now has a username attached to it infront of it)
                  
                 except:
                     broadcast_data(sock, "Client (%s, %s) is offline" % addr)
