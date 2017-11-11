@@ -2,8 +2,9 @@
 A simple python app for sending text messages through telnet. Group messages are possible
 
 The app is divided into two
-  *Server*
-  *Client*
+
+  1. *Server*
+  2. *Client*
 
 *Server*
   Program hosts a socket on a given port to initate a chat. It continuously listens to this port and broadcasts any message input at this port to all the user in the client list that it maintains.
