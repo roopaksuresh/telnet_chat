@@ -8,12 +8,13 @@ def prompt() :
 #main function
 if __name__ == "__main__":
      
-    if(len(sys.argv) < 3) :
-        print 'Usage : python telnet.py hostname port'
+    if(len(sys.argv) < 4) :
+        print 'Usage : python chat_server.py hostname port username'
         sys.exit()
      
     host = sys.argv[1]
     port = int(sys.argv[2])
+    username = sys.argv[3]   #username as 3rd arg so as to concatinate it with the message
      
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(2)
@@ -48,6 +49,6 @@ if __name__ == "__main__":
              
             #user entered a message
             else :
-                msg = sys.stdin.readline()
+                msg = username + " => " + sys.stdin.readline()   #username is added to the front of the message.
                 s.send(msg)
                 prompt()
