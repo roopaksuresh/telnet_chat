@@ -11,3 +11,5 @@ The app is divided into two
   
 *Client*
   Program acts as the client interface. Any message can be typed onto the screen and hit [Enter] to send the message. Which is then broadcasted to every user connected to that port using a chat server serving that port.
+  
+PS: the program was initially copied so that i could learn python sockets. I then tweaked it so that *username* is shown which earlier used to be a user id during the chat.
