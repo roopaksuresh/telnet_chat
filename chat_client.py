@@ -9,7 +9,7 @@ def prompt() :
 if __name__ == "__main__":
      
     if(len(sys.argv) < 4) :
-        print 'Usage : python chat_server.py hostname port username'
+        print 'Usage : python chat_client.py hostname port username'
         sys.exit()
      
     host = sys.argv[1]
